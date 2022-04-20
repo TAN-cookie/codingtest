@@ -52,14 +52,19 @@ const router = require('express').Router()
 // }
 
 function solution(id_list, report, k) {
+    // 유저 index 배열
     let userId = Array.from(Array(id_list.length), () => 0)
+    // 중복 제거된 정지 대상자 목록
     let target = [];
+    // 신고 횟수
     let result = {};
+    // 신고 목록 중에서 중복 제거
     new Set(report).forEach(f => {
         const r = f.split(' ');
         target.push(r);
         result[r[1]] = (result[r[1]] || 0) + 1;
     })
+    // 풀이 방법
     Object.keys(result).forEach(f => {
         if (result[f] >= k) target.filter(a => a[1] === f).forEach(m => userId[id_list.indexOf(m[0])]++)
     })
