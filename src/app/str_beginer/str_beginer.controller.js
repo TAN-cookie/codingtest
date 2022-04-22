@@ -6,8 +6,7 @@ const router = require('express').Router()
  */
 
 function solution(s) {
-    const regex = /[a-z]/gi;
-    return +s && !s.match(regex) && (s.length === 4 || s.length === 6) ? true : false;
+    return +s && !s.match(/[a-z]/gi) && (s.length === 4 || s.length === 6) ? true : false;
 }
 
 // console.log(solution("a234")) // false
