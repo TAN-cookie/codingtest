@@ -14,4 +14,7 @@ router.use('/str_beginer', str_beginerCtrl)
 const missing_numbersCtrl = require('./missing_numbers/missing_numbers.controller')
 router.use('/missing_numbers', missing_numbersCtrl)
 
+const do_productCtrl = require('./do_product/do_product.controller')
+router.use('/do_product', do_productCtrl)
+
 module.exports = router;
