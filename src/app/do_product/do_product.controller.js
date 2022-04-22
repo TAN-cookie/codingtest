@@ -6,7 +6,11 @@ const router = require('express').Router()
  * @param {Array} b 숫자 배열
  * @return {Number} 내적
  */
-
+/**
+ * acc = 초기값
+ * cur = a[i]
+ * b[i] = b[i]
+ */
 solution = (a, b) => a.reduce((acc, cur, i) => acc + cur * b[i], 0);
 
 // console.log(solution([1, 2, 3, 4], [-3, -1, 0, 2])) // 3
