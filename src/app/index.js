@@ -5,6 +5,9 @@ const router = require('express').Router()
  * --------------------------------------------------------------------------------
  */
 
+const fraction_plusCtrl = require('./fraction_plus/fraction_plus.controller')
+router.use('/fraction_plus', fraction_plusCtrl)
+
 const reportCtrl = require('./report/report.controller')
 router.use('/report', reportCtrl)
 
